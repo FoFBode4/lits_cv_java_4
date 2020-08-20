@@ -12,6 +12,8 @@ import java.util.List;
 @Controller
 @RequestMapping("/resume")
 public class ResumeController {
+    private  static  final int LOGGER_IN_USER_ID=1;
+
     @GetMapping("/item")
     @ResponseBody
 
