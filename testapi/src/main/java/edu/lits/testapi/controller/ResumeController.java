@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 @Controller
-@RequestMapping("/card")
+@RequestMapping("/resume")
 public class ResumeController {
     @GetMapping("/item")
     @ResponseBody
