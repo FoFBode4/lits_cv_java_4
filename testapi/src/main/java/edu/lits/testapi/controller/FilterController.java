@@ -1,6 +1,7 @@
 package edu.lits.testapi.controller;
 
 import edu.lits.testapi.model.Card;
+import edu.lits.testapi.model.CardCreateRequest;
 import edu.lits.testapi.model.Filter;
 import edu.lits.testapi.model.FilterRequest;
 import org.springframework.stereotype.Controller;
@@ -33,6 +34,14 @@ public class FilterController {
         filter.setProfessionList(List.of("driver", "manager"));
         return new ArrayList<>();
 
+    }
+
+    @PostMapping("/create")
+    @ResponseBody
+    public String createCard(@RequestBody CardCreateRequest request) {
+        //викликати сервіс і викликати репозиторій, як в резюме контролеррі
+
+        return "success";
     }
 
     }
