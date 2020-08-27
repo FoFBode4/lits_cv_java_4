@@ -9,6 +9,7 @@ import java.time.LocalDate;
 public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private Long author_id;
     private Long worker_id;
     private String name;
@@ -17,6 +18,14 @@ public class Card {
     private int rating;
     private int price;
     private String description;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Long getAuthor_id() {
         return author_id;
