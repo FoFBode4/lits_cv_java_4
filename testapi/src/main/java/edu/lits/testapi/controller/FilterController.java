@@ -40,7 +40,7 @@ public class FilterController {
     @ResponseBody
     public String createCard(@RequestBody CardCreateRequest request) {
         //викликати сервіс і викликати репозиторій, як в резюме контролеррі
-
+//
         return "success";
     }
 
