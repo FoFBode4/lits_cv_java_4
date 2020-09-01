@@ -1,8 +1,6 @@
 package edu.lits.testapi.service;
 
-import edu.lits.testapi.pojo.Resume;
-import edu.lits.testapi.pojo.User;
-import edu.lits.testapi.repository.ResumeRepository;
+import edu.lits.testapi.pojo.User;;
 import edu.lits.testapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 

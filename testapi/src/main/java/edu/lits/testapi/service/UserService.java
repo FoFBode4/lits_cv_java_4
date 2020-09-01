@@ -1,6 +1,6 @@
 package edu.lits.testapi.service;
 
-import edu.lits.testapi.pojo.Resume;
+
 import edu.lits.testapi.pojo.User;
 
 public interface UserService {
