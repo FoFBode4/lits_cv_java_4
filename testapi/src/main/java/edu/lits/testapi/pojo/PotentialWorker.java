@@ -3,7 +3,7 @@ package edu.lits.testapi.pojo;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "resume")
+@Table(name = "potentialWorker")
 public class PotentialWorker {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
