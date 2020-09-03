@@ -1,5 +1,6 @@
 package edu.lits.testapi.pojo;
 import javax.persistence.*;
+import java.util.Set;
 
 
 @Entity
@@ -11,6 +12,11 @@ public class User {
     private String name;
     private String city;
     private int rating;
+
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private Set<Resume> resume;
+
 
     public Long getId() {
         return id;

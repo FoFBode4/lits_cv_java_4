@@ -1,5 +1,6 @@
 package edu.lits.testapi.pojo;
 import javax.persistence.*;
+
 @Entity
 @Table(name = "resume")
 public class Resume {
@@ -8,6 +9,11 @@ public class Resume {
     private Long id;
     private String user_id;
     private  Long profession_id;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "user_id", nullable = false, insertable = false, updatable = false)
+    private User user;
+
 
     public Resume() {
     }
