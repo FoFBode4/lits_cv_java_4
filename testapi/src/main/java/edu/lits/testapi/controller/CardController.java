@@ -17,7 +17,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/card")
 public class CardController {
-    private  static  final int LOGGER_IN_USER_ID=1;
+    private static final int LOGGER_IN_USER_ID = 1;
 
     @Autowired
     private CardService cardService;
@@ -25,8 +25,7 @@ public class CardController {
     @GetMapping("/item")
     @ResponseBody
     public Card getCard(@RequestParam(required = true, defaultValue = "Chernivtsi") Integer id,
-                        @RequestParam(required = false,
-                                defaultValue = "Chernivtsi") String location) {
+                        @RequestParam(required = false, defaultValue = "Chernivtsi") String location) {
         System.out.println("here");
         edu.lits.testapi.pojo.Card card = cardService.readByID(1L);
         return new Card();
@@ -34,22 +33,59 @@ public class CardController {
 
     @GetMapping("/list")
     @ResponseBody
-
     public List<Card> getCardList(@RequestParam(required = false, defaultValue = "Chernivtsi") String location) {
         System.out.println("here");
 
-        return List.of(new Card(), new Card()) ;
+        return List.of(new Card(), new Card());
     }
+
+
+    @GetMapping("/create")
+    @ResponseBody
+    public Card createCard(@RequestParam(required = false) Card userCard) {
+        System.out.println("here");
+        return new Card();
+    }
+
+    @GetMapping("/update")
+    @ResponseBody
+    public Card updateCard(@RequestParam(required = true) Card userCard,
+                           @RequestParam(required = true) Long cardID) {
+        System.out.println("here");
+        return new Card();
+    }
+
+    @GetMapping("/subscribe")
+    @ResponseBody
+    public Card subscribeToCard(@RequestParam(required = true) Integer userWorkerID,
+                                @RequestParam(required = true) Integer CardID) {
+        System.out.println("here");
+        return new Card();
+    }
+
+    @GetMapping("/confirm-card-worker")
+    @ResponseBody
+    public Card confirmCardWorker(@RequestParam(required = true) Long workerID,
+                                  @RequestParam(required = true) Long cardID) {
+        System.out.println("here");
+        return new Card();
+    }
+
+    @GetMapping("/confirm")
+    @ResponseBody
+    public Card confirmCard(@RequestParam(required = true) Long cardID,
+                            @RequestParam(required = true) Integer rating) {
+//        TODO
+
+        System.out.println("here");
+        return new Card();
+    }
+
+
 /*
     TODO:
     createCard(model.Card card)
-     updateCard(model.Card, card_id)
-        subscribetocard(user_worker_id, card_id)
-            congirmcardworker(worker_id, card_id)
-                confirmcard(card_id, rating)
-
  */
-
 
 
 }
