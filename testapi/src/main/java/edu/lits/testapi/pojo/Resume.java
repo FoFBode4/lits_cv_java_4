@@ -1,4 +1,5 @@
 package edu.lits.testapi.pojo;
+
 import javax.persistence.*;
 
 @Entity
@@ -6,13 +7,10 @@ import javax.persistence.*;
 public class Resume {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     private String user_id;
-    private  Long profession_id;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_id", nullable = false, insertable = false, updatable = false)
-    private User user;
+    private Long profession_id;
 
 
     public Resume() {
